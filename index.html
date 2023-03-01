@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<link rel="stylesheet" href="reset.css" />
+		<link rel="stylesheet" href="styles.css" />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
+		<title>Wordle</title>
+
+		<script
+			src="https://kit.fontawesome.com/ed9338fcbf.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div id="container">
+			<header>
+				<img
+					src="./images/logo.svg"
+					alt="Quadrado amarelo com a letra W preta ao centro"
+				/>
+				<button
+					class="changeTheme"
+					onclick="changeTheme()"
+					title="Alterar tema"
+				>
+					<i id="iconTheme" class="fa-solid fa-sun"></i>
+				</button>
+			</header>
+
+			<main>
+				<div class="board">
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+					<div class="rectangle"></div>
+				</div>
+
+				<div class="keyboard">
+					<div class="lineOne">
+						<button class="letter">Q</button>
+						<button class="letter">W</button>
+						<button class="letter">E</button>
+						<button class="letter">R</button>
+						<button class="letter">T</button>
+						<button class="letter">Y</button>
+						<button class="letter">U</button>
+						<button class="letter">I</button>
+						<button class="letter">O</button>
+						<button class="letter">P</button>
+					</div>
+					<div class="lineTwo">
+						<button class="letter">A</button>
+						<button class="letter">S</button>
+						<button class="letter">D</button>
+						<button class="letter">F</button>
+						<button class="letter">G</button>
+						<button class="letter">H</button>
+						<button class="letter">J</button>
+						<button class="letter">K</button>
+						<button class="letter">L</button>
+					</div>
+					<div class="lineThree">
+						<button class="enter">ENTER</button>
+						<button class="letter">Z</button>
+						<button class="letter">X</button>
+						<button class="letter">C</button>
+						<button class="letter">V</button>
+						<button class="letter">B</button>
+						<button class="letter">N</button>
+						<button class="letter">M</button>
+						<button class="backspace">
+							<i class="fa-sharp fa-solid fa-delete-left"></i>
+						</button>
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<script>
+			function changeTheme() {
+				const container = document.getElementById('container');
+				const icon = document.getElementById('iconTheme');
+
+				if (container.classList.contains('light')) {
+					container.classList.remove('light');
+					icon.classList.remove('fa-moon');
+					icon.classList.add('fa-sun');
+				} else {
+					container.classList.add('light');
+					icon.classList.remove('fa-sun');
+					icon.classList.add('fa-moon');
+				}
+			}
+		</script>
+	</body>
+</html>
